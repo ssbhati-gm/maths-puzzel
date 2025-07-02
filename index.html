@@ -725,11 +725,9 @@
                     symbol = '−';
                     break;
                 case 'mul':
-                    // Make multiplication easier for higher digits
-                    if (settings.digits > 2) {
-                        num1 = Math.floor(Math.random() * 20) + 1;
-                        num2 = Math.floor(Math.random() * 20) + 1;
-                    }
+                    // Modified multiplication logic
+                    num1 = Math.floor(Math.random() * 11) + 10;   // 10-20 (inclusive)
+                    num2 = Math.floor(Math.random() * 8) + 2;      // 2-9 (inclusive)
                     operation = (a, b) => a * b;
                     symbol = '×';
                     break;
